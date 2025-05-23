@@ -1,0 +1,71 @@
+/* body {
+    background-image: url('./unid2.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto; */
+/* } */
+.letter_type {
+    font-family: serif;
+}
+.title {
+    font-size: 5rem;
+}
+.team_random {
+    color: white;
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center;
+     margin-top: 50px;
+}
+
+.equipo { 
+    margin: 20px 0; 
+}
+
+.miembro { 
+    font-size: 1.2em; margin: 5px;
+ }
+
+.spinner { 
+    font-size: 1.5em; color: rgb(250, 236, 236); margin-top: 20px;
+ }
+
+ body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .bg-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.6); 
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+  }
+
+  .button {
+    background-color: #53abf7;
+    font-size: large;
+    border: 1px solid #023cea;
+    font-style: italic;
+    border-radius: 5px;
+  }
