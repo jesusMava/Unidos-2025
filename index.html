@@ -19,7 +19,12 @@
     const miembros_pre_cargados = {
       "Equipo 1": ['nombre1', 'nombre2', "nombre6"],
       "Equipo 2": ['nombre3', 'nombre4', "nombre7"],
-      "Equipo 3": ['nombre5'],
+      "Equipo 3": ['nombre5','nombre11'],
+      "Equipo 4": ['nombre6','nombre12'],
+      "Equipo 5": ['nombre7','nombr13'],
+      "Equipo 6": ['nombre8','nombre14'],
+      "Equipo 7": ['nombre9','nombre15'],
+      "Equipo 8": ['nombre10','nombre16'],
     };
     let equipoSeleccionado = null;
 
@@ -69,31 +74,36 @@ function mostrarEquipoFinal() {
   let i = 0;
 
   function mostrarMiembroUnoPorUno() {
-    if (i >= miembrosDelEquipo.length) return;
+  if (i >= miembrosDelEquipo.length) return;
 
-    const pasos = 5;
-    let j = 0;
-    const spinner = document.createElement('div');
-    spinner.className = 'spinner';
-    output.appendChild(spinner);
+  const pasos = 5;
+  let j = 0;
+  const spinner = document.createElement('div');
+  spinner.className = 'spinner';
+  output.appendChild(spinner);
 
-    const intervalo = setInterval(() => {
-      const nombreMostrado = miembrosDelEquipo[i];
-      spinner.textContent = nombreMostrado;
+  const intervalo = setInterval(() => {
+    // 🔄 Muestra nombres aleatorios para simular efecto de sorteo
+    const nombreAleatorio = miembrosDelEquipo[Math.floor(Math.random() * miembrosDelEquipo.length)];
+    spinner.textContent = nombreAleatorio;
 
-      if (++j >= pasos) {
-        clearInterval(intervalo);
-        spinner.remove();
+    if (++j >= pasos) {
+      clearInterval(intervalo);
+      spinner.remove();
 
-        const div = document.createElement('div');
-        div.className = 'miembro letter_type';
-        div.textContent = i + 1 + "- " + nombreMostrado;
-        i++;
-        output.appendChild(div);
-        setTimeout(mostrarMiembroUnoPorUno, 100);
-      }
-    }, 100);
-  }
+      // ✅ Mostrar miembro definitivo
+      const miembroFinal = miembrosDelEquipo[i];
+      const div = document.createElement('div');
+      div.className = 'miembro letter_type';
+      div.textContent = `${i + 1} - ${miembroFinal}`;
+      output.appendChild(div);
+
+      i++;
+      setTimeout(mostrarMiembroUnoPorUno, 100);
+    }
+  }, 100);
+}
+
         console.log(miembros)
   if (miembrosDelEquipo.length < 1) {
     const div = document.createElement('div');
