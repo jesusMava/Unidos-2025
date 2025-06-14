@@ -7,118 +7,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- <h1 class="title letter_type">Unidos 2025</h1>
-  <div id="output"></div>
-  <button onclick="simularSeleccion()">Mostrar equipo aleatorio</button> -->
-
-  <script>
-    const miembros = ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9'
-    , 'm10', 'm11', 'm12','m13','m14','m15','m16','m17','m18', 'm19', 'm20',
-     'm21', 'm22', 'm23', 'm24', 'm25', 'm26','m27','m28','m29','m30', 'm31']
-     
-    const miembros_pre_cargados = {
-      "Equipo 1": ['nombre1', 'nombre2', "nombre6"],
-      "Equipo 2": ['nombre3', 'nombre4', "nombre7"],
-      "Equipo 3": ['nombre5','nombre11'],
-      "Equipo 4": ['nombre6','nombre12'],
-      "Equipo 5": ['nombre7','nombr13'],
-      "Equipo 6": ['nombre8','nombre14'],
-      "Equipo 7": ['nombre9','nombre15'],
-      "Equipo 8": ['nombre10','nombre16'],
-    };
-    let equipoSeleccionado = null;
-
-    const equipos = Array.from({ length: 8 }, (_, i) => ({
-      nombre: `Equipo ${i + 1}`,
-    }));  
-
-    function simularSeleccion() {
-      const output = document.getElementById('output');
-      output.innerHTML = '<div class="spinner ">Seleccionando equipo...</div>';
-
-      let pasos = 10;
-      let i = 0;
-
-      const intervalo = setInterval(() => {
-        equipoSeleccionado = Math.floor(Math.random() * equipos.length);
-        const equipoRandom = equipos[equipoSeleccionado];
-        output.innerHTML = `<div class="spinner ">${equipoRandom.nombre}</div>`;
-
-        if (++i >= pasos) {
-          clearInterval(intervalo);
-          mostrarEquipoFinal();
-        }
-      }, 100);
-
-    }
-
-function mostrarEquipoFinal() {
-  const equipoFinal = equipos.splice(equipoSeleccionado, 1)[0];
-  const output = document.getElementById('output');
-  output.innerHTML = `<h2>${equipoFinal.nombre}</h2>`;
-
-  // Detectar miembros pre-cargados
-  const preCargados = miembros_pre_cargados[equipoFinal.nombre] || [];
-
-  // Mezclar pre-cargados con los miembros aleatorios
-  let miembrosDelEquipo = preCargados.concat(
-    miembros.splice(0, Math.max(0, 8 - preCargados.length))
-  );
-
-  // Mezclar los miembros del equipo de forma aleatoria
-  for (let i = miembrosDelEquipo.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [miembrosDelEquipo[i], miembrosDelEquipo[j]] = [miembrosDelEquipo[j], miembrosDelEquipo[i]];
-  }
-
-  let i = 0;
-
-  function mostrarMiembroUnoPorUno() {
-  if (i >= miembrosDelEquipo.length) return;
-
-  const pasos = 5;
-  let j = 0;
-  const spinner = document.createElement('div');
-  spinner.className = 'spinner';
-  output.appendChild(spinner);
-
-  const intervalo = setInterval(() => {
-    // 🔄 Muestra nombres aleatorios para simular efecto de sorteo
-    const nombreAleatorio = miembrosDelEquipo[Math.floor(Math.random() * miembrosDelEquipo.length)];
-    spinner.textContent = nombreAleatorio;
-
-    if (++j >= pasos) {
-      clearInterval(intervalo);
-      spinner.remove();
-
-      // ✅ Mostrar miembro definitivo
-      const miembroFinal = miembrosDelEquipo[i];
-      const div = document.createElement('div');
-      div.className = 'miembro letter_type';
-      div.textContent = `${i + 1} - ${miembroFinal}`;
-      output.appendChild(div);
-
-      i++;
-      setTimeout(mostrarMiembroUnoPorUno, 100);
-    }
-  }, 100);
-}
-
-        console.log(miembros)
-  if (miembrosDelEquipo.length < 1) {
-    const div = document.createElement('div');
-    div.className = 'miembro letter_type';
-    div.textContent = "No hay más participantes";
-    output.appendChild(div);
-  } else {
-    mostrarMiembroUnoPorUno();
-  }
-}
-
-  </script>
-
-
-
+  <script src="miembros.js"></script>
 <!-- Carouse unidos -->
   <!-- Carrusel como background -->
   <div id="backgroundCarousel" class="carousel slide carousel-fade bg-carousel" data-bs-ride="carousel" data-bs-interval="3000">
@@ -169,7 +58,12 @@ function mostrarEquipoFinal() {
   <div class="content">
     <h1 class="title letter_type">Unidos 2025</h1>
   <button class="button" onclick="simularSeleccion()">Mostrar equipo aleatorio</button>
+
+  <div id="team" class="team"></div>
+  <div id="capitan" class="capitan"></div>
+  <div id="co_capitan" class="co_capitan"></div>
   <div id="output"></div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

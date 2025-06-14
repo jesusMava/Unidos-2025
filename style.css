@@ -59,7 +59,7 @@ body {
     z-index: 1;
     color: white;
     text-align: center;
-    padding-top: 20%;
+    padding-top: 10%;
   }
 
   .button {
@@ -69,3 +69,39 @@ body {
     font-style: italic;
     border-radius: 5px;
   }
+
+  .capitan {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+  }
+
+  .co_capitan {
+    color: rgb(39, 221, 39);
+  }
+
+.Paz {
+  color: #45ff33;
+}
+
+.Testimonio {
+  color: #520422;
+}
+.Promesas {
+  color: #ff0600;
+}
+.Libertad {
+  color: #0388e5;
+}
+.Seguridad {
+  color: #fafdff;
+}
+.Fidelidad {
+  color: #f9ff00;
+}
+.Misericordia {
+  color: #000000;
+}
+.bg-equipos {
+  /* background-color: #e9e9e9; */
+  font-weight: bold;
+}
