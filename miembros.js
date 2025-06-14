@@ -71,23 +71,23 @@
     };
 
     const cap_y_co_capitanes = {
-      "Equipo 1":["pepe","José David García Mejía"],
-      "Equipo 2": ["Angy", "Karen Anahí Negrete Peña"] ,
-      "Equipo 3": ["Julian", "Ariadna Sinaí", ] ,//julian
+      "Equipo 1":["JESUS PADILLA RANGEL","José David García Mejía"],
+      "Equipo 2": ["ANGELICA ALEJANDRA MARTINEZ ORTIZ", "Karen Anahí Negrete Peña"] ,
+      "Equipo 3": ["JOSÉ JULIÁN TORRES PÉREZ", "Ariadna Sinaí", ] ,//julian
       "Equipo 4": ["ETHAN VIDAL LOPEZ OROZCO", "Martin Pérez Ibarra"],//Ethan
-      "Equipo 5": ["caro", "Adela Yuleni Pérez"],//caro
-      "Equipo 6": ["TRISTAN EMMANUEL LOPEZ OROZCO", "Ramses Marcelino Portes" ],//thristan
-      "Equipo 7": ["Bríttany", "Regina Orozco Ortega " ],//brith
+      "Equipo 5": ["CAROLINA AGUIRRE", "Adela Yuleni Pérez"],//caro
+      "Equipo 6": ["THRISTAN EMMANUEL LOPEZ OROZCO", "Ramses Marcelino Portes" ],//thristan
+      "Equipo 7": ["BRITANNY SARAHI LOPEZ OROZCO", "Regina Orozco Ortega " ],//brith
     }
 
     const nombre_equipos = {
       "Equipo 1": ["Paz","45ff33"],
       "Equipo 2": ["Testimonio", "520422"],
-      "Equipo 3": ["Promesas","ff0600"],
+      "Equipo 7": ["Promesas","ff0600"],
       "Equipo 4": ["Libertad", "0388e5"],
       "Equipo 5": ["Seguridad", "fafdff" ],
       "Equipo 6": ["Fidelidad", "f9ff00"],
-      "Equipo 7": ["Misericordia", "000000"]
+      "Equipo 3": ["Misericordia", "000000"]
     }
 
     const num_participantes_equipo = 10
@@ -108,6 +108,7 @@
       co_capitan.innerHTML = "";
       let pasos = 10;
       let i = 0;
+      console.log(equipos[equipoSeleccionado])
       if(equipos.length > 0){
         const intervalo = setInterval(() => {
         equipoSeleccionado = Math.floor(Math.random() * equipos.length);
@@ -181,7 +182,7 @@ function mostrarEquipoFinal() {
     }, 100);
   }
 
-  if (miembrosDelEquipo.length < 1 || equipos.length < 0) {
+  if (miembros.length < 1 && equipos.length < 0) {
     const div = document.createElement('div');
     div.className = 'miembro letter_type';
     div.textContent = "No hay más participantes";
