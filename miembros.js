@@ -1,83 +1,60 @@
 
-    const miembros = [
-"TRISTAN EMMANUEL LOPEZ OROZCO",
-"ETHAN VIDAL LOPEZ OROZCO",
-"BRITANNY SARAHI LOPEZ OROZCO",
-"BETSAIDA ABIGAHIL LOPEZ OROZCO",
-"DANIELA SOFIA DOMÍNGUEZ LLAMAS",
-"ARIADNA SINAÍ DOMÍNGUEZ LLAMAS",
-"KAREN ANAHÍ NEGRETE PEÑA",
-"VICTORIA SHALOM AGUILAR DOMÍNGUEZ",
-"BRENDA LUCERO SEPÚLVEDA MEZA",
-"TANIA MERAZ GARCÍA",
-"CRISTIAN VÁZQUEZ LEMUS",
-"JOSÉ JULIÁN TORRES PÉREZ ",
-"ANGELICA ALEJANDRA MARTINEZ ORTIZ",
-"ADYLENNE MUÑOZ BARAJAS",
-"ADELA YULENI PÉREZ IBARRA",
-"JENNIFER ANDREA CHAVEZ BAUTISTA ",
-"BRANDON ABEL GUTIÉRREZ AYALA",
-"ÁNGEL ENRIQUE GUTIÉRREZ AYALA",
-"RONAY ISAÍ GARCÍA ZÚÑIGA",
-"ALAN EMILIANO SAUCEDO SERRATOS",
-"BRISA ESMERALDA GARCÍA BAUTISTA",
-"JOSHUA ALEXANDER OCHOA DÍAZ",
-"JESUS MACEDO VAZQUEZ ",
-"JESUS PADILLA RANGEL ",
-"JOSÉ DAVID GARCÍA MEJIA",
-"ERICK MARCOS GARCÍA",
-"CAROLINA AGUIRRE",
-"BERENICE BORJAS",
-"ALEJANDRA BORJAS ZARAGOZA",
-"PAOLA DE JESÚS VELASCO CAMPOS",
-"LIZETH GONZÁLEZ SÁNCHEZ",
-"RAMSES MARCELINO PORTES GIL GARCÍA",
-"MARTÍN PÉREZ IBARRA",
-"JESHUA GAMALIEL BARAJAS CAMPOS",
-"DIEGO ARMANDO MARTÍNEZ ORTIZ",
-"LIZETH SARAÍ VÁZQUEZ LEMUS",
-"DIEGO CÉSAR SILVA GARCÍA",
-"ABRAHAM CASTELLANOS VERA",
-"DAMARIS TENORIO BALBUENA",
-"KAROL ELIZABETH CERVANTES MIRANDA",
-"CARINA ELIZABETH AGUIRRE MONTES",
-"JULIA MONTAÑO",
-"VANIA RAQUEL CUESTA BARAJAS",
-"ALEJANDRO JAVIER SILVA GARCÍA",
-"ARIANA QUETZALLY RODRÍGUEZ HOYOS",
-"BERNARDO GABRIEL CÁRDENAS",
-"WILLIAM EMMANUEL TORRES JIMÉNEZ",
-"JAZMÍN ESMERALDA OSEGURA BARBOZA",
-"ISAAC NATANAEL GÓMEZ LÓPEZ",
-"KARLA NAOMI ABREU SALAS",
-"REGINA OROZCO ORTEGA",
-"CAMILA BRIGITTE VERA HERNÁNDEZ",
-"EDVAN ALAN GALINDO JIMÉNEZ",
-"EMIR",
-"CRISTIAN SAÚL GONZÁLEZ MARTÍNEZ",
-"ELIZABETH BORJAS ZARAGOZA",
-"DANIEL ALBERTO BORJAS ZARAGOZA",
-"JACQUELINE GABRIELA MEJÍA GARCÍA",
-"EVELYN DANIELA GUTIERREZ MARTÍNEZ",
-    ]
+   const miembros = [
+    "VICTORIA SHALOM AGUILAR DOMÍNGUEZ",
+    "BRENDA LUCERO SEPÚLVEDA MEZA",
+    "ARON DAVID HERNANDEZ RODRIGUEZ",
+    "JENNIFER ANDREA CHAVEZ BAUTISTA",
+    "BRANDON ABEL GUTIÉRREZ AYALA",
+    "ÁNGEL ENRIQUE GUTIÉRREZ AYALA",
+    "ALAN EMILIANO SAUCEDO SERRATOS",
+    "JOSHUA ALEXANDER OCHOA DÍAZ",
+    "LIZETH GONZÁLEZ SÁNCHEZ",
+    "ITZEL MARELY AYALA JUAREZ",
+    "JESHUA GAMALIEL BARAJAS CAMPOS",
+    "ABRAHAM CASTELLANOS VERA",
+    "DAMARIS TENORIO BALBUENA",
+    "KAROL ELIZABETH CERVANTES MIRANDA",
+    "CARINA ELIZABETH AGUIRRE MONTES",
+    "VANIA RAQUEL CUESTA BARAJAS",
+    "ALEJANDRO JAVIER SILVA GARCÍA",
+    "ARIANA QUETZALLY RODRÍGUEZ HOYOS",
+    "BERNARDO GABRIEL CÁRDENAS",
+    "JAZMÍN ESMERALDA OSEGURA BARBOZA",
+    "KARLA NAOMI ABREU SALAS",
+    "CAMILA BRIGITTE VERA HERNÁNDEZ",
+    "EDVAN ALAN GALINDO JIMÉNEZ",
+    "EMIR",
+    "CRISTIAN SAÚL GONZÁLEZ MARTÍNEZ",
+    "JACQUELINE GABRIELA MEJÍA GARCÍA",
+    "ALDO ALEJANDRO AYALA JUAREZ",
+    "IVANNA SOPHIA OROZCO ORTEGA",
+    "OLIVER SANTIAGO GUZMÁN GUTIÉRREZ",
+    "JUAN CARLOS LAZOS",
+    "AIDE LAZOS",
+    "ALFREDO ANGEL DE LEON",
+    "MARIA JOSE RODRIGUEZ GARCIA",
+    "Sergio Alonso Llamas García",
+    "Sofía Evelyn Alcalá"
+  ]
 
     const miembros_pre_cargados = {
-      "Equipo 7": ['Evelyn Daniela Gutiérrez'],//britt
-      "Equipo 6": ['Isaac Gomez','Erick Marcos García'],//Thristan
-      "Equipo 5": ["Ronay Isaí García Zúñiga",'William Emanuel Torres'], //caro
-      "Equipo 4": ['Daniel Borjas'],//Ethan
-      "Equipo 2": ['Adylenne Muñoz Barajas','Diego Armando Martinez Ortiz'],//angie
-      "Equipo 1": ['Daniela Sofía Domínguez'],//pepe
+      "Equipo 7": ['Evelyn Daniela Gutiérrez', 'BIANCA'],
+      "Equipo 6": ['Isaac Gomez','Erick Marcos García', "TANIA MERAZ GARCÍA"],
+      "Equipo 5": ["Ronay Isaí García Zúñiga",'William Emanuel Torres', "BRISA ESMERALDA GARCÍA BAUTISTA"], 
+      "Equipo 4": ['Daniel Borjas', "LIZETH SARAÍ VÁZQUEZ LEMUS"],
+      "Equipo 2": ['Adylenne Muñoz Barajas','Diego Armando Martinez Ortiz', "ELIZABETH BORJAS ZARAGOZA"],
+      "Equipo 1": ['Daniela Sofía Domínguez', "JULIA MONTAÑO"],
+      "Equipo 3": ['DIEGO CÉSAR SILVA GARCÍA'],
     };
 
     const cap_y_co_capitanes = {
       "Equipo 1":["JESUS PADILLA RANGEL","José David García Mejía"],
       "Equipo 2": ["ANGELICA ALEJANDRA MARTINEZ ORTIZ", "Karen Anahí Negrete Peña"] ,
-      "Equipo 3": ["JOSÉ JULIÁN TORRES PÉREZ", "Ariadna Sinaí", ] ,//julian
-      "Equipo 4": ["ETHAN VIDAL LOPEZ OROZCO", "Martin Pérez Ibarra"],//Ethan
-      "Equipo 5": ["CAROLINA AGUIRRE", "Adela Yuleni Pérez"],//caro
-      "Equipo 6": ["THRISTAN EMMANUEL LOPEZ OROZCO", "Ramses Marcelino Portes" ],//thristan
-      "Equipo 7": ["BRITANNY SARAHI LOPEZ OROZCO", "Regina Orozco Ortega " ],//brith
+      "Equipo 3": ["JOSÉ JULIÁN TORRES PÉREZ", "Ariadna Sinaí", ] ,
+      "Equipo 4": ["ETHAN VIDAL LOPEZ OROZCO", "Martin Pérez Ibarra"],
+      "Equipo 5": ["CAROLINA AGUIRRE", "Adela Yuleni Pérez"],
+      "Equipo 6": ["THRISTAN EMMANUEL LOPEZ OROZCO", "Ramses Marcelino Portes" ],
+      "Equipo 7": ["BRITANNY SARAHI LOPEZ OROZCO", "Regina Orozco Ortega " ],
     }
 
     const nombre_equipos = {
@@ -90,7 +67,9 @@
       "Equipo 3": ["Misericordia", "000000"]
     }
 
-    const num_participantes_equipo = 10
+    const total_disponibles = miembros.length + Object.values(miembros_pre_cargados).flat().length;
+    const total_equipos = 7;
+    const num_participantes_equipo = Math.floor(total_disponibles / total_equipos);
     let equipoSeleccionado = null;
 
     const equipos = Array.from({ length: 7 }, (_, i) => ({
@@ -140,10 +119,20 @@ function mostrarEquipoFinal() {
   const preCargados = miembros_pre_cargados[equipoFinal.nombre] || [];
 
   // Mezclar pre-cargados con los miembros aleatorios
-  let miembrosDelEquipo = preCargados.concat(
-    miembros.splice(0, Math.max(0, num_participantes_equipo - preCargados.length))
-  );
-  console.log(miembrosDelEquipo)
+  // let miembrosDelEquipo = preCargados.concat(
+
+  //   miembros.splice(0, Math.max(0, num_participantes_equipo - preCargados.length))
+  // );
+  const faltan = Math.max(0, num_participantes_equipo - preCargados.length);
+  const aleatorios = [];
+
+  for (let i = 0; i < faltan; i++) {
+    const idx = Math.floor(Math.random() * miembros.length);
+    aleatorios.push(miembros.splice(idx, 1)[0]);
+  }
+
+  let miembrosDelEquipo = preCargados.concat(aleatorios);
+  console.log(miembros)
   // Mezclar los miembros del equipo de forma aleatoria
   for (let i = miembrosDelEquipo.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
